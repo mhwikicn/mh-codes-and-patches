@@ -27,7 +27,7 @@ patch=1,EE,10AC95C0,extended,00000FFF
 patch=1,EE,70AC8100,extended,00000001
 ```
 #### 模拟器专用代码文件（.pnach后缀，独立版）
-[下载](/SLPM-66280_2F0E94A1_PSP联动检测绕过.pnach)
+[下载](./SLPM-66280_2F0E94A1_PSP联动检测绕过.pnach)
 #### 原始码
 ```
 E0040002 00AC8158

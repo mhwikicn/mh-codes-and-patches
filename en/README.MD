@@ -27,7 +27,7 @@ patch=1,EE,10AC95C0,extended,00000FFF
 patch=1,EE,70AC8100,extended,00000001
 ```
 #### Codes file for emulator(.pnach)
-[Download](/SLPM-66280_2F0E94A1_PSP_Connection_Check_Bypass.pnach)
+[Download](./SLPM-66280_2F0E94A1_PSP_Connection_Check_Bypass.pnach)
 #### Raw codes
 ```
 E0040002 00AC8158
