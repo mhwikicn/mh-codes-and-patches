@@ -1,6 +1,6 @@
 # Monster Hunter codes and patches
 
-#### Mostly cheat codes, usable on emulators or real console with a proper cheat system.
+#### Mostly cheat codes, for emulators or real hardware system with a proper cheat support.
 
 # PS2
 ## Monster Hunter 2(dos) SLPM_662.80
