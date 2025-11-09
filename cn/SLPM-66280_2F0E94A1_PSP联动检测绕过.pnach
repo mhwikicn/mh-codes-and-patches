@@ -1,0 +1,11 @@
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[PSP联动检测绕过(SELECT+START)]
+author=猪突猛进锅
+description=在联动界面检测MHP连接时，按SELECT+START绕过检测
+patch=1,EE,E0040002,extended,00AC8158
+patch=1,EE,E003000B,extended,00AC8154
+patch=1,EE,E002FFF6,extended,0024BC1C
+patch=1,EE,10AC95C0,extended,00000FFF
+patch=1,EE,70AC8100,extended,00000001
+
