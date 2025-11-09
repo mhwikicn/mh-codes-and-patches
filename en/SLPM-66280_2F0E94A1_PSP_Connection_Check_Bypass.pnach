@@ -2,7 +2,7 @@ gametitle=Monster Hunter 2 (SLPM-66280)
 
 [PSP Connection Check Bypass(SELECT+START)]
 author=PoogieCharger
-description=Press SELECT+START to bypass Monster Hunter Portable connection check.
+description=Press SELECT+START to bypass connection check with Monster Hunter Portable.
 patch=1,EE,E0040002,extended,00AC8158
 patch=1,EE,E003000B,extended,00AC8154
 patch=1,EE,E002FFF6,extended,0024BC1C
