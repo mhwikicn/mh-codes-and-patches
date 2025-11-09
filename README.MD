@@ -1,2 +1,2 @@
-- [中文说明](/cn/README.md)
-- [English Readme](/en/README.md)
+- [中文说明](/cn/)
+- [English Readme](/en/)
