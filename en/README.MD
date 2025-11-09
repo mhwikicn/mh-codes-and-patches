@@ -43,15 +43,14 @@ E002FFF6 0024BC1C
 
 Enter *CONNECT* from main menu, load your save and get ready, on *Checking MONSTER HUNTER 2* screen, press *SELECT+START* to bypass the connection check.
 
-* Added a simple condition to prevent repetitive trigger, but not guaranteed to be safe, please don't press the key combination outside the CONNECT screen, or just disable the codes when not in use
+* Cannot prevent repeated triggering(for now), please don't press the key combination outside the CONNECT screen, or just disable the codes when not in use
 * Theoretically the same as connecting with a real PS2
 * Tested on PPSSPP(v1.19.3) and PSP 3000 model(Ark-4 cfw+Cheat Master Fusion), not guaranteed for other envrionments
 #### Codes for emulator
 ```
 _C1 PS2 Connection Check Bypass(SELECT+START)
 Press SELECT+START to bypass connection check with Monster Hunter 2.
-_L 0xE0040009 0x00179e94
-_L 0xE00339FF 0x102248C0
+_L 0xE0030009 0x00179e94
 _L 0xE0020001 0x00224848
 _L 0x102248C0 0x000039FF
 _L 0x00224848 0x00000003
