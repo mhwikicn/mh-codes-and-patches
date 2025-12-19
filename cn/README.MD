@@ -24,7 +24,7 @@ patch=1,EE,E0040002,extended,00AC8158
 patch=1,EE,E003000B,extended,00AC8154
 patch=1,EE,E002FFF6,extended,0024BC1C
 patch=1,EE,10AC95C0,extended,00000FFF
-patch=1,EE,70AC8100,extended,00000001
+patch=1,EE,00AC8100,extended,00000001
 ```
 #### 模拟器专用代码文件（.pnach后缀，独立版）
 [下载](./SLPM-66280_2F0E94A1_PSP联动检测绕过.pnach)
@@ -34,7 +34,7 @@ E0040002 00AC8158
 E003000B 00AC8154
 E002FFF6 0024BC1C
 10AC95C0 00000FFF
-70AC8100 00000001
+00AC8100 00000001
 ```
 # PSP
 ## 怪物猎人便携版（MHP） ULJM-05066
@@ -60,4 +60,4 @@ _L 0x00224848 0x00000003
 [下载](./ULJM05066_PS2联动检测绕过.ini)
 
 
-###### 最后更新: 2025/11/09 by 猪突猛进锅
+###### 最后更新: 2025/12/20 by 猪突猛进锅

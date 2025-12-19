@@ -24,7 +24,7 @@ patch=1,EE,E0040002,extended,00AC8158
 patch=1,EE,E003000B,extended,00AC8154
 patch=1,EE,E002FFF6,extended,0024BC1C
 patch=1,EE,10AC95C0,extended,00000FFF
-patch=1,EE,70AC8100,extended,00000001
+patch=1,EE,00AC8100,extended,00000001
 ```
 #### Codes file for emulator(.pnach)
 [Download](./SLPM-66280_2F0E94A1_PSP_Connection_Check_Bypass.pnach)
@@ -34,7 +34,7 @@ E0040002 00AC8158
 E003000B 00AC8154
 E002FFF6 0024BC1C
 10AC95C0 00000FFF
-70AC8100 00000001
+00AC8100 00000001
 ```
 # PSP
 ## Monster Hunter Portable(MHP) ULJM-05066
@@ -60,4 +60,4 @@ _L 0x00224848 0x00000003
 [Download](./ULJM05066_PS2_Connection_Check_Bypass.ini)
 
 
-###### Last update: 2025/11/09 by PoogieCharger
+###### Last update: 2025/12/20 by PoogieCharger
