@@ -6,9 +6,9 @@
 
 ## SaveState2MemCard
 This is intended solely to bypass the game's built-in verification function that prevents save states from being saved to the memcard in certain conditions. It is not meant to encourage abuse of the save state feature.
-Note: Only enable "Enable SaveState2MemCard" when necessary, and make sure to back up your memcard in advance. After successfully saving, it is strongly recommended to disable the code, then activate "Disable SaveState2MemCard" once, let the game resume running, and then turn off "Disable SaveState2MemCard".
-The game's built-in verification function ensures that save data cannot be written to another memcard/save data. Activating the code bypasses this safety mechanism, which carries certain risks, such as accidentally overwriting existing save data on the memcard.
-For MH1j/MHG, saving will write all 3 characters to the 3 slots of the memcard save file. For MH2, only the currently used character will be saved to the current slot of the memcard save file.
+* Only enable "Enable SaveState2MemCard" when necessary, and make sure to back up your memcard in advance. After successfully saving, it is strongly recommended to disable the code, then activate "Disable SaveState2MemCard" once, let the game resume running, and then turn off "Disable SaveState2MemCard".
+* The game's built-in verification function ensures that save data cannot be written to another memcard/save data. Activating the code bypasses this safety mechanism, which carries certain risks, such as accidentally overwriting existing save data on the memcard.
+* For MH1j/MHG, saving will write all 3 characters to the 3 slots of the memcard save file. For MH2, only the currently used character will be saved to the current slot of the memcard save file.
 
 ### Monster Hunter 1j SLPM_654.95
 #### Codes for emulator
