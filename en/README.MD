@@ -3,10 +3,70 @@
 #### Mostly cheat codes, for emulators or real hardware system with a proper cheat support.
 
 # PS2
-## Monster Hunter 2(dos) SLPM_662.80
 
-### PSP Connection Check Bypass
+## SaveState2MemCard
+This is intended solely to bypass the game's built-in verification function that prevents save states from being saved to the memcard in certain conditions. It is not meant to encourage abuse of the save state feature.
+Note: Only enable "Enable SaveState2MemCard" when necessary, and make sure to back up your memcard in advance. After successfully saving, it is strongly recommended to disable the code, then activate "Disable SaveState2MemCard" once, let the game resume running, and then turn off "Disable SaveState2MemCard".
+The game's built-in verification function ensures that save data cannot be written to another memcard/save data. Activating the code bypasses this safety mechanism, which carries certain risks, such as accidentally overwriting existing save data on the memcard.
+For MH1j/MHG, saving will write all 3 characters to the 3 slots of the memcard save file. For MH2, only the currently used character will be saved to the current slot of the memcard save file.
 
+### Monster Hunter 1j SLPM_654.95
+#### Codes for emulator
+```
+gametitle=Monster Hunter (SLPM-65495)
+
+[Enable SaveState2MemCard]
+author=PoogieCharger
+description=CAUTION! Can save with any SaveStates, only enable this when you REALLY need to save
+patch=1,EE,10284A12,extended,00001000
+
+[Disable SaveState2MemCard]
+author=PoogieCharger
+description=disable "Enable SaveState2MemCard" first, then enable "Disable SaveState2MemCard", resume game, then you can disable this, too
+patch=1,EE,10284A12,extended,00001440
+```
+#### Codes file for emulator(.pnach)
+[Download](./SLPM-65495_C2008A92_SaveState2MemCard.pnach)
+
+### Monster Hunter G SLPM_658.69
+#### Codes for emulator
+```
+gametitle=Monster Hunter G (SLPM-65869)
+
+[Enable SaveState2MemCard]
+author=PoogieCharger
+description=CAUTION! Can save with any SaveStates, only enable this when you REALLY need to save
+patch=1,EE,1022E9F2,extended,00001000
+
+[Disable SaveState2MemCard]
+author=PoogieCharger
+description=disable "Enable SaveState2MemCard" first, then enable "Disable SaveState2MemCard", resume game, then you can disable this, too
+patch=1,EE,1022E9F2,extended,00001440
+```
+#### Codes file for emulator(.pnach)
+[Download](./SLPM-65869_29396A53_SaveState2MemCard.pnach)
+
+### Monster Hunter 2 SLPM_662.80
+#### Codes for emulator
+```
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[Enable SaveState2MemCard]
+author=PoogieCharger
+description=CAUTION! Can save with any SaveStates, only enable this when you REALLY need to save
+patch=1,EE,203DB240,extended,00000000
+
+[Disable SaveState2MemCard]
+author=PoogieCharger
+description=disable "Enable SaveState2MemCard" first, then enable "Disable SaveState2MemCard", resume game, then you can disable this, too
+patch=1,EE,203DB240,extended,10400021
+```
+#### Codes file for emulator(.pnach)
+[Download](./SLPM-66280_2F0E94A1_SaveState2MemCard.pnach)
+
+## PSP Connection Check Bypass
+
+### Monster Hunter 2(dos) SLPM_662.80
 Enter *CONNECT* from main menu, load your save and get ready, on *Checking MONSTER HUNTER PORTABLE* screen, press *SELECT+START* to bypass the connection check.
 
 * Support PCSX2 mordern cheat system, can be toggled on/off
@@ -37,10 +97,10 @@ E002FFF6 0024BC1C
 00AC8100 00000001
 ```
 # PSP
-## Monster Hunter Portable(MHP) ULJM-05066
 
-### PS2 Connection Check Bypass
+## PS2 Connection Check Bypass
 
+### Monster Hunter Portable(MHP) ULJM-05066
 Enter *CONNECT* from main menu, load your save and get ready, on *Checking MONSTER HUNTER 2* screen, press *SELECT+START* to bypass the connection check.
 
 * Cannot prevent repeated triggering(for now), please don't press the key combination outside the CONNECT screen, or just disable the codes when not in use
@@ -60,4 +120,4 @@ _L 0x00224848 0x00000003
 [Download](./ULJM05066_PS2_Connection_Check_Bypass.ini)
 
 
-###### Last update: 2025/12/20 by PoogieCharger
+###### Last update: 2026/04/13 by PoogieCharger

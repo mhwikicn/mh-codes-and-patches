@@ -1,0 +1,11 @@
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[启用即时存档强制保存]
+author=猪突猛进锅
+description=注意! 能够保存任意即时存档到记忆卡中，请仅在需要的时候开启
+patch=1,EE,203DB240,extended,00000000
+
+[禁用即时存档强制保存]
+author=猪突猛进锅
+description=先关闭“启用即时存档强制保存”，再开启“禁用即时存档强制保存”，恢复游戏后，就可以关闭“禁用即时存档强制保存”了
+patch=1,EE,203DB240,extended,10400021

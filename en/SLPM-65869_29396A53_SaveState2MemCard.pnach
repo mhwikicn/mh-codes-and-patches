@@ -1,0 +1,11 @@
+gametitle=Monster Hunter G (SLPM-65869)
+
+[Enable SaveState2MemCard]
+author=PoogieCharger
+description=CAUTION! Can save with any SaveStates, only enable this when you REALLY need to save
+patch=1,EE,1022E9F2,extended,00001000
+
+[Disable SaveState2MemCard]
+author=PoogieCharger
+description=disable "Enable SaveState2MemCard" first, then enable "Disable SaveState2MemCard", resume game, then you can disable this, too
+patch=1,EE,1022E9F2,extended,00001440
