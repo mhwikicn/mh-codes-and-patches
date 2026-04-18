@@ -4,6 +4,129 @@
 
 # PS2
 
+## 随身箱子
+该功能受[dos-plus/dos-enhanced](https://greinoso96.github.io/mhplus-rel/index.html)的启发而制作，向YuzucchiNyan致谢。
+* 按R2+L3可在村中或城镇任意地点打开物品箱。
+* 在城镇大部分公共地区打开的物品箱仅能用于存取物品，不能更换装备，这是为了联机兼容性专门设置的，并非功能问题。
+* 在非城镇或村中/玩家无法自由行动/玩家已准备任务出发/玩家与其他对象交互中时无法打开箱子。
+* 在其他人家中做客时更换的装备只会在出门后广播到其他玩家。
+* 代码理论上兼容YuzucchiNyan制作的dos-plus与dos-enhanced补丁。
+* 已通过PCSX2模拟器（v2.0以上新版）和PS2厚机30000机型（OPL+PS2RD金手指引擎）测试，目前未发现问题。
+
+### 怪物猎人2（dos） SLPM_662.80
+#### 模拟器专用代码文本
+```
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[随身箱子TEST(R2+L3)]
+author=猪突猛进锅
+description=在村子或城镇中按R2+L3打开箱子界面
+patch=1,EE,E030FFFF,extended,005D8280
+patch=1,EE,E1060001,extended,005F9218
+patch=1,EE,E0050000,extended,008BDC10
+patch=1,EE,E004FDFD,extended,0024BC1C
+patch=1,EE,205F91A0,extended,00802A48
+patch=1,EE,E0020020,extended,0079CA24
+patch=1,EE,E0013063,extended,0079CA26
+patch=1,EE,2079CA24,extended,24030020
+patch=1,EE,E1030000,extended,005F9218
+patch=1,EE,E0020020,extended,0079CA24
+patch=1,EE,E0012403,extended,0079CA26
+patch=1,EE,2079CA24,extended,30630020
+patch=1,EE,E0070C26,extended,00762622
+patch=1,EE,E0060000,extended,00762624
+patch=1,EE,20762620,extended,3C01008B
+patch=1,EE,20762624,extended,8C224370
+patch=1,EE,20762628,extended,0220282D
+patch=1,EE,2076262C,extended,24060005
+patch=1,EE,20762630,extended,0C0D52DC
+patch=1,EE,20762634,extended,24440008
+patch=1,EE,E1030083,extended,006ADCC4
+patch=1,EE,E1020005,extended,007F1B77
+patch=1,EE,007F1B77,extended,00000002
+patch=1,EE,2076262C,extended,24060002
+patch=1,EE,E1030084,extended,006ADCC4
+patch=1,EE,E1020005,extended,007F1B77
+patch=1,EE,007F1B77,extended,00000002
+patch=1,EE,2076262C,extended,24060002
+patch=1,EE,E1030086,extended,006ADCC4
+patch=1,EE,E1020005,extended,007F1B77
+patch=1,EE,007F1B77,extended,00000002
+patch=1,EE,2076262C,extended,24060002
+patch=1,EE,E1030087,extended,006ADCC4
+patch=1,EE,E1020005,extended,007F1B77
+patch=1,EE,007F1B77,extended,00000002
+patch=1,EE,2076262C,extended,24060002
+patch=1,EE,E1030088,extended,006ADCC4
+patch=1,EE,E1020005,extended,007F1B77
+patch=1,EE,007F1B77,extended,00000002
+patch=1,EE,2076262C,extended,24060002
+patch=1,EE,E0081112,extended,007F1B74
+patch=1,EE,E0070209,extended,007F1B76
+patch=1,EE,E1060083,extended,106ADCC4
+patch=1,EE,E1050084,extended,106ADCC4
+patch=1,EE,E1040086,extended,106ADCC4
+patch=1,EE,E1030087,extended,106ADCC4
+patch=1,EE,E1020088,extended,106ADCC4
+patch=1,EE,007F1B77,extended,00000005
+patch=1,EE,2076262C,extended,24060005
+
+```
+#### 模拟器专用代码文件（.pnach后缀，独立版）
+[下载](./SLPM-66280_2F0E94A1_随身箱子.pnach)
+#### 原始码
+```
+E030FFFF 005D8280
+E1060001 005F9218
+E0050000 008BDC10
+E004FDFD 0024BC1C
+205F91A0 00802A48
+E0020020 0079CA24
+E0013063 0079CA26
+2079CA24 24030020
+E1030000 005F9218
+E0020020 0079CA24
+E0012403 0079CA26
+2079CA24 30630020
+E0070C26 00762622
+E0060000 00762624
+20762620 3C01008B
+20762624 8C224370
+20762628 0220282D
+2076262C 24060005
+20762630 0C0D52DC
+20762634 24440008
+E1030083 006ADCC4
+E1020005 007F1B77
+007F1B77 00000002
+2076262C 24060002
+E1030084 006ADCC4
+E1020005 007F1B77
+007F1B77 00000002
+2076262C 24060002
+E1030086 006ADCC4
+E1020005 007F1B77
+007F1B77 00000002
+2076262C 24060002
+E1030087 006ADCC4
+E1020005 007F1B77
+007F1B77 00000002
+2076262C 24060002
+E1030088 006ADCC4
+E1020005 007F1B77
+007F1B77 00000002
+2076262C 24060002
+E0081112 007F1B74
+E0070209 007F1B76
+E1060083 106ADCC4
+E1050084 106ADCC4
+E1040086 106ADCC4
+E1030087 106ADCC4
+E1020088 106ADCC4
+007F1B77 00000005
+2076262C 24060005
+```
+
 ## 即时存档强制保存
 本代码仅用于解决游戏内置的校验功能导致即时存档无法保存到记忆卡的问题，并不鼓励滥用即时存档功能。
 * 仅在需要时开启“启用即时存档强制保存”，并提前做好记忆卡备份，成功保存后强烈建议关闭该代码，并激活一次“禁用即时存档强制保存”，恢复游戏运行后再关闭“禁用即时存档强制保存”。
@@ -97,6 +220,7 @@ E002FFF6 0024BC1C
 10AC95C0 00000FFF
 00AC8100 00000001
 ```
+
 # PSP
 
 ## PS2联动检测绕过
@@ -121,4 +245,4 @@ _L 0x00224848 0x00000003
 [下载](./ULJM05066_PS2联动检测绕过.ini)
 
 
-###### 最后更新: 2026/04/13 by 猪突猛进锅
+###### 最后更新: 2026/04/18 by 猪突猛进锅
