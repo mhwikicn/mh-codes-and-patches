@@ -10,7 +10,7 @@ This feature is inspired by [dos-plus/dos-enhanced](https://greinoso96.github.io
 * Item boxes opened in most public areas of the town can only be used to store or retrieve items, not to change equipment. This is specifically designed for online compatibility and is not a functional issue.
 * The item box cannot be opened outside of the village/town, or when the player is unable to move freely | ready to depart for quest | interacting with other objects/characters.
 * Equipment changed while visiting another player's house will only be broadcast to other players after leaving the house.
-* Theoretically compatible with the dos-plus/dos-enhanced patches created by YuzucchiNyan.
+* In addition to the original game, the code is also theoretically compatible with the dos-plus/dos-enhanced patches created by YuzucchiNyan.
 * Tested on PCSX2(v2.0 later) and PS2 fat 30000 model (OPL+PS2RD), with no issues found so far.
 
 ### Monster Hunter 2(dos) SLPM_662.80
@@ -245,4 +245,4 @@ _L 0x00224848 0x00000003
 [Download](./ULJM05066_PS2_Connection_Check_Bypass.ini)
 
 
-###### Last update: 2026/04/18 by PoogieCharger
+###### Last update: 2026/04/19 by PoogieCharger
