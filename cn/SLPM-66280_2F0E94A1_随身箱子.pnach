@@ -1,6 +1,6 @@
 gametitle=Monster Hunter 2 (SLPM-66280)
 
-[随身箱子TEST(R2+L3)]
+[随身箱子(R2+L3)]
 author=猪突猛进锅
 description=在村子或城镇中按R2+L3打开箱子界面
 patch=1,EE,E030FFFF,extended,005D8280

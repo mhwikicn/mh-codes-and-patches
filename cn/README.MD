@@ -4,6 +4,34 @@
 
 # PS2
 
+## 关闭领导者弹窗
+MH2目前在线上模式时有时会出现“领导者正在…”的弹窗，导致无法正常游戏，在多人PvP不能正常进行的情况下，可以按L2+L3关闭该弹窗，理论上不会有其他影响。
+* 如果未来服务器支持多人PvP，这一弹窗出现不再是问题时，请考虑禁用代码，或避免按下组合键，并仅在出现非正常弹窗时按下组合键。
+
+### 怪物猎人2（dos） SLPM_662.80
+#### 模拟器专用代码文本
+```
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[关闭“领导者正在…”弹窗(L2+L3)]
+author=猪突猛进锅
+description=某些情况下弹出“领导者正在…”窗口时，按L2+L3可将其关闭
+patch=1,EE,E003FFFF,extended,005D8280
+patch=1,EE,E0020040,extended,008BDC10
+patch=1,EE,E001FEFD,extended,0024BC1C
+patch=1,EE,108BDC10,extended,00000000
+```
+#### 模拟器专用代码文件（.pnach后缀，独立版）
+[下载](./SLPM-66280_2F0E94A1_关闭领导者弹窗.pnach)
+#### 原始码
+```
+E003FFFF 005D8280
+E0020040 008BDC10
+E001FEFD 0024BC1C
+108BDC10 00000000
+
+```
+
 ## 随身箱子
 该功能受[dos-plus/dos-enhanced](https://greinoso96.github.io/mhplus-rel/index.html)的启发而制作，向YuzucchiNyan致谢。
 * 按R2+L3可在村中或城镇任意地点打开物品箱。
@@ -18,7 +46,7 @@
 ```
 gametitle=Monster Hunter 2 (SLPM-66280)
 
-[随身箱子TEST(R2+L3)]
+[随身箱子(R2+L3)]
 author=猪突猛进锅
 description=在村子或城镇中按R2+L3打开箱子界面
 patch=1,EE,E030FFFF,extended,005D8280
@@ -245,4 +273,4 @@ _L 0x00224848 0x00000003
 [下载](./ULJM05066_PS2联动检测绕过.ini)
 
 
-###### 最后更新: 2026/04/19 by 猪突猛进锅
+###### 最后更新: 2026/04/24 by 猪突猛进锅

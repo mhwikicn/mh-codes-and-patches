@@ -4,6 +4,34 @@
 
 # PS2
 
+## TeamLeaderPopupKiller
+In MH2 online mode, a popup window saying 'The team leader is...' may sometimes appear, preventing normal gameplay. In situations where multiplayer PvP cannot proceed properly, you can press L2+L3 to close the popup window. In theory, this should have no other side effects.
+* If the server supports multiplayer PvP in the future and this popup window is no longer an issue, please consider disabling the code or avoid pressing the key combination, and only press it when an abnormal popup window appears.
+
+### Monster Hunter 2(dos) SLPM_662.80
+#### Code for emulator
+```
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[TeamLeaderPopupKiller(L2+L3)]
+author=PoogieCharger
+description=when you get a "the team leader..." popup, press L2+L3 to force close it
+patch=1,EE,E003FFFF,extended,005D8280
+patch=1,EE,E0020040,extended,008BDC10
+patch=1,EE,E001FEFD,extended,0024BC1C
+patch=1,EE,108BDC10,extended,00000000
+```
+#### Code file for emulator(.pnach)
+[Download](./SLPM-66280_2F0E94A1_TeamLeaderPopupKiller.pnach)
+#### Raw code
+```
+E003FFFF 005D8280
+E0020040 008BDC10
+E001FEFD 0024BC1C
+108BDC10 00000000
+
+```
+
 ## ItemBoxAnywhere
 This feature is inspired by [dos-plus/dos-enhanced](https://greinoso96.github.io/mhplus-rel/index.html), big thanks to YuzucchiNyan.
 * Press R2+L3 to open the item box anywhere in village or town.
@@ -245,4 +273,4 @@ _L 0x00224848 0x00000003
 [Download](./ULJM05066_PS2_Connection_Check_Bypass.ini)
 
 
-###### Last update: 2026/04/19 by PoogieCharger
+###### Last update: 2026/04/24 by PoogieCharger

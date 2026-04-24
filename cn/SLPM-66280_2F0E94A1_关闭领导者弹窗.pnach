@@ -1,0 +1,9 @@
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[关闭“领导者正在…”弹窗(L2+L3)]
+author=猪突猛进锅
+description=某些情况下弹出“领导者正在…”窗口时，按L2+L3可将其关闭
+patch=1,EE,E003FFFF,extended,005D8280
+patch=1,EE,E0020040,extended,008BDC10
+patch=1,EE,E001FEFD,extended,0024BC1C
+patch=1,EE,108BDC10,extended,00000000

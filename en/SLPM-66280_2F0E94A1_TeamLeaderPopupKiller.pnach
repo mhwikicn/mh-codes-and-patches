@@ -1,0 +1,9 @@
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[TeamLeaderPopupKiller(L2+L3)]
+author=PoogieCharger
+description=when you get a "the team leader..." popup, press L2+L3 to force close it
+patch=1,EE,E003FFFF,extended,005D8280
+patch=1,EE,E0020040,extended,008BDC10
+patch=1,EE,E001FEFD,extended,0024BC1C
+patch=1,EE,108BDC10,extended,00000000
