@@ -1,0 +1,13 @@
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[远程武器视角锁定]
+author=猪突猛进锅
+description=使用远程武器瞄准后恢复至普通视角（弩：松开L1，弓：松开R1）时，可维持瞄准前的视角高度，START + →开启，START + ←关闭
+patch=1,EE,D024BC1C,extended,0300FFD7
+patch=1,EE,D031B1B0,extended,02000070
+patch=1,EE,D031B1B2,extended,0100A264
+patch=1,EE,2031B1B0,extended,00000000
+patch=1,EE,D024BC1C,extended,0300FF77
+patch=1,EE,D031B1B0,extended,02000000
+patch=1,EE,D031B1B2,extended,01000000
+patch=1,EE,2031B1B0,extended,A2640070

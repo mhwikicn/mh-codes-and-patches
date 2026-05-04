@@ -1,0 +1,13 @@
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[RangedWeaponCameraLock]
+author=PoogieCharger
+description=When returning to the normal view after aiming with a ranged weapon (bowgun: release L1, bow: release R1), the camera height from before aiming is maintained. Press START + → to enable, START + ← to disable.
+patch=1,EE,D024BC1C,extended,0300FFD7
+patch=1,EE,D031B1B0,extended,02000070
+patch=1,EE,D031B1B2,extended,0100A264
+patch=1,EE,2031B1B0,extended,00000000
+patch=1,EE,D024BC1C,extended,0300FF77
+patch=1,EE,D031B1B0,extended,02000000
+patch=1,EE,D031B1B2,extended,01000000
+patch=1,EE,2031B1B0,extended,A2640070

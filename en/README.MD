@@ -4,6 +4,41 @@
 
 # PS2
 
+## RangedWeaponCameraLock
+In the original game, when aiming with a ranged weapon and then canceling the aim (bowgun: release L1, bow: release R1), the camera height automatically adjusts based on the aiming view. This code allows you to lock the camera height so it is not affected by ranged weapon aiming.
+* Press START + → to enable the function, press START + ← to disable and revert to the original behavior.
+
+### Monster Hunter 2(dos) SLPM_662.80
+#### Code for emulator
+```
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[RangedWeaponCameraLock]
+author=PoogieCharger
+description=When returning to the normal view after aiming with a ranged weapon (bowgun: release L1, bow: release R1), the camera height from before aiming is maintained. Press START + → to enable, START + ← to disable.
+patch=1,EE,D024BC1C,extended,0300FFD7
+patch=1,EE,D031B1B0,extended,02000070
+patch=1,EE,D031B1B2,extended,0100A264
+patch=1,EE,2031B1B0,extended,00000000
+patch=1,EE,D024BC1C,extended,0300FF77
+patch=1,EE,D031B1B0,extended,02000000
+patch=1,EE,D031B1B2,extended,01000000
+patch=1,EE,2031B1B0,extended,A2640070
+```
+#### Code file for emulator(.pnach)
+[Download](./SLPM-66280_2F0E94A1_RangedWeaponCameraLock.pnach)
+#### Raw code
+```
+E003FFD7 0024BC1C
+E0020070 0031B1B0
+E001A264 0031B1B2
+2031B1B0 00000000
+E003FF77 0024BC1C
+E0020000 0031B1B0
+E0010000 0031B1B2
+2031B1B0 A2640070
+```
+
 ## TeamLeaderPopupKiller
 In MH2 online mode, a popup window saying 'The team leader is...' may sometimes appear, preventing normal gameplay. In situations where multiplayer PvP cannot proceed properly, you can press L2+L3 to close the popup window. In theory, this should have no other side effects.
 * If the server supports multiplayer PvP in the future and this popup window is no longer an issue, please consider disabling the code or avoid pressing the key combination, and only press it when an abnormal popup window appears.
@@ -29,7 +64,6 @@ E003FFFF 005D8280
 E0020040 008BDC10
 E001FEFD 0024BC1C
 108BDC10 00000000
-
 ```
 
 ## ItemBoxAnywhere
@@ -98,7 +132,6 @@ patch=1,EE,E1030087,extended,106ADCC4
 patch=1,EE,E1020088,extended,106ADCC4
 patch=1,EE,007F1B77,extended,00000005
 patch=1,EE,2076262C,extended,24060005
-
 ```
 #### Code file for emulator(.pnach)
 [Download](./SLPM-66280_2F0E94A1_ItemBoxAnywhere.pnach)
@@ -267,10 +300,9 @@ _L 0xE0030009 0x00179e94
 _L 0xE0020001 0x00224848
 _L 0x102248C0 0x000039FF
 _L 0x00224848 0x00000003
-
 ```
 #### Code file for emulator(.ini)
 [Download](./ULJM05066_PS2_Connection_Check_Bypass.ini)
 
 
-###### Last update: 2026/04/24 by PoogieCharger
+###### Last update: 2026/05/04 by PoogieCharger
