@@ -289,20 +289,20 @@ E002FFF6 0024BC1C
 ### Monster Hunter Portable(MHP) ULJM-05066
 Enter *CONNECT* from main menu, load your save and get ready, on *Checking MONSTER HUNTER 2* screen, press *SELECT+START* to bypass the connection check.
 
-* Cannot prevent repeated triggering(for now), please don't press the key combination outside the CONNECT screen, or just disable the code when not in use
-* Theoretically the same as connecting with a real PS2
-* Tested on PPSSPP(v1.19.3) and PSP 3000 model(Ark-4 cfw+Cheat Master Fusion), not guaranteed for other envrionments
+* Cannot prevent repeated triggering(for now), please don't press the key combination outside the CONNECT screen, or just disable the code when not in use;
+* Theoretically the same as connecting with a real PS2(MH2 progress having completed the slaying of Kushala Daora);
+* Tested on PPSSPP(v1.19.3) and PSP 3000 model(Ark-4 cfw+Cheat Master Fusion), not guaranteed for other envrionments.
 #### Code for emulator
 ```
 _C1 PS2 Connection Check Bypass(SELECT+START)
 Press SELECT+START to bypass connection check with Monster Hunter 2.
-_L 0xE0030009 0x00179e94
+_L 0xE0030009 0x00179E94
 _L 0xE0020001 0x00224848
-_L 0x102248C0 0x000039FF
+_L 0x102248C0 0x00003F2F
 _L 0x00224848 0x00000003
 ```
 #### Code file for emulator(.ini)
 [Download](./ULJM05066_PS2_Connection_Check_Bypass.ini)
 
 
-###### Last update: 2026/05/04 by PoogieCharger
+###### Last update: 2026/05/05 by PoogieCharger
