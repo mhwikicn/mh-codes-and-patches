@@ -1,2 +1,2 @@
-- [中文说明](/cn/)
-- [English Readme](/en/)
+- [中文说明](./cn/)
+- [English Readme](./en/)
