@@ -257,7 +257,7 @@ Enter *CONNECT* from main menu, load your save and get ready, on *Checking MONST
 * Support PCSX2 mordern cheat system, can be toggled on/off
 * Key combination only takes effect on checking connection screen(a total three conditional checks for actual execution), it can theoretically remain on without other effects
 * Theoretically the same as connecting with a real PSP
-* Tested on PCSX2(v2.0 later) and PS2 fat 30000 model (OPL+PS2RD), not guaranteed for other envrionments
+* Tested on PCSX2(v2.0 later) and PS2 fat 30000 model (OPL+PS2RD), not guaranteed for other environments
 #### Code for emulator
 ```
 gametitle=Monster Hunter 2 (SLPM-66280)
@@ -291,7 +291,7 @@ Enter *CONNECT* from main menu, load your save and get ready, on *Checking MONST
 
 * Cannot prevent repeated triggering(for now), please don't press the key combination outside the CONNECT screen, or just disable the code when not in use;
 * Theoretically the same as connecting with a real PS2(MH2 progress having completed the slaying of Kushala Daora);
-* Tested on PPSSPP(v1.19.3) and PSP 3000 model(Ark-4 cfw+Cheat Master Fusion), not guaranteed for other envrionments.
+* Tested on PPSSPP(v1.19.3) and PSP 3000 model(Ark-4 cfw+Cheat Master Fusion), not guaranteed for other environments.
 #### Code for emulator
 ```
 _C1 PS2 Connection Check Bypass(SELECT+START)
