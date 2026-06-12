@@ -4,9 +4,373 @@
 
 # PS2
 
+## InputMethodOptimization
+Optimized the default state when switching to English input mode: it now uses half‑width lowercase characters by default, instead of full‑width characters or even uppercase letters (yes, I'm looking at you, Monster Hunter 1j). When the input window is reopened, the previous input state is retained, so you don't need to keep switching input methods.
+* After sending a quick chat or an action, the input state when reopening the chat window depends on the last non‑quick‑chat / non‑action input state.
+* For versions that already have a patch setting English input as the default (e.g., MHG / MH2 with English patch), this code is of little use and may not work as expected.
+* Requires the newer version of PCSX2 emulator (v2.0 or later), or you can manually edit and add the code to your existing .pnach file.
+
+### Monster Hunter(1j) SLPM_654.95
+#### Code for emulator
+```
+gametitle=Monster Hunter (SLPM-65495)
+
+[InputMethodOptimization]
+author=PoogieCharger
+description=Set the English input mode to use (half-width, lowercase) as default, and optimize the input method to retain previous state.
+patch=1,EE,200F0000,extended,3C010052
+patch=1,EE,200F0004,extended,2421EEAF
+patch=1,EE,200F0008,extended,14A10015
+patch=1,EE,200F000C,extended,24090002
+patch=1,EE,200F0010,extended,50890016
+patch=1,EE,200F0014,extended,2404000F
+patch=1,EE,200F0018,extended,24090004
+patch=1,EE,200F001C,extended,240B0005
+patch=1,EE,200F0020,extended,14890008
+patch=1,EE,200F0024,extended,3C01000F
+patch=1,EE,200F0028,extended,90A90000
+patch=1,EE,200F002C,extended,112B000C
+patch=1,EE,200F0030,extended,00000000
+patch=1,EE,200F0034,extended,A029FFFF
+patch=1,EE,200F0038,extended,90C90000
+patch=1,EE,200F003C,extended,10000008
+patch=1,EE,200F0040,extended,A029FFFE
+patch=1,EE,200F0044,extended,148B0006
+patch=1,EE,200F0048,extended,90AB0000
+patch=1,EE,200F004C,extended,112B0004
+patch=1,EE,200F0050,extended,00000000
+patch=1,EE,200F0054,extended,A02BFFFF
+patch=1,EE,200F0058,extended,90C90000
+patch=1,EE,200F005C,extended,A029FFFE
+patch=1,EE,200F0060,extended,A0A40000
+patch=1,EE,200F0064,extended,080988D0
+patch=1,EE,200F0068,extended,A0C40000
+patch=1,EE,200F006C,extended,A0A90000
+patch=1,EE,200F0070,extended,080988D0
+patch=1,EE,200F0074,extended,A0C40000
+patch=1,EE,200F0078,extended,8F82BB60
+patch=1,EE,200F007C,extended,9049001E
+patch=1,EE,200F0080,extended,240A0004
+patch=1,EE,200F0084,extended,152A0003
+patch=1,EE,200F0088,extended,240A0005
+patch=1,EE,200F008C,extended,10000002
+patch=1,EE,200F0090,extended,00000000
+patch=1,EE,200F0094,extended,152A0005
+patch=1,EE,200F0098,extended,3C01000F
+patch=1,EE,200F009C,extended,9029FFFE
+patch=1,EE,200F00A0,extended,A049001E
+patch=1,EE,200F00A4,extended,9029FFFF
+patch=1,EE,200F00A8,extended,A049001F
+patch=1,EE,200F00AC,extended,08097F32
+patch=1,EE,200F00B0,extended,00000000
+patch=1,EE,D025FCC0,extended,0A00BB60
+patch=1,EE,D025FCC2,extended,09008F82
+patch=1,EE,D0262338,extended,08000000
+patch=1,EE,D026233A,extended,0700A0A4
+patch=1,EE,2025FB1C,extended,00000000
+patch=1,EE,2025FCB8,extended,00000000
+patch=1,EE,2025FCC0,extended,0803C01E
+patch=1,EE,2025FCC4,extended,00000000
+patch=1,EE,20262338,extended,0803C000
+patch=1,EE,2026233C,extended,00000000
+patch=1,EE,2026248C,extended,00000000
+```
+#### Code file for emulator(.pnach)
+[Download](./SLPM-65495_C2008A92_InputMethodOptimization.pnach)
+#### Raw code
+```
+200F0000 3C010052
+200F0004 2421EEAF
+200F0008 14A10015
+200F000C 24090002
+200F0010 50890016
+200F0014 2404000F
+200F0018 24090004
+200F001C 240B0005
+200F0020 14890008
+200F0024 3C01000F
+200F0028 90A90000
+200F002C 112B000C
+200F0030 00000000
+200F0034 A029FFFF
+200F0038 90C90000
+200F003C 10000008
+200F0040 A029FFFE
+200F0044 148B0006
+200F0048 90AB0000
+200F004C 112B0004
+200F0050 00000000
+200F0054 A02BFFFF
+200F0058 90C90000
+200F005C A029FFFE
+200F0060 A0A40000
+200F0064 080988D0
+200F0068 A0C40000
+200F006C A0A90000
+200F0070 080988D0
+200F0074 A0C40000
+200F0078 8F82BB60
+200F007C 9049001E
+200F0080 240A0004
+200F0084 152A0003
+200F0088 240A0005
+200F008C 10000002
+200F0090 00000000
+200F0094 152A0005
+200F0098 3C01000F
+200F009C 9029FFFE
+200F00A0 A049001E
+200F00A4 9029FFFF
+200F00A8 A049001F
+200F00AC 08097F32
+200F00B0 00000000
+E00ABB60 0025FCC0
+E0098F82 0025FCC2
+E0080000 00262338
+E007A0A4 0026233A
+2025FB1C 00000000
+2025FCB8 00000000
+2025FCC0 0803C01E
+2025FCC4 00000000
+20262338 0803C000
+2026233C 00000000
+2026248C 00000000
+```
+
+### Monster Hunter G SLPM_658.69
+#### Code for emulator
+```
+gametitle=Monster Hunter G (SLPM-65869)
+
+[InputMethodOptimization]
+author=PoogieCharger
+description=Set the English input mode to use half-width as default, and optimize the input method to retain previous state.
+patch=1,EE,200F0000,extended,3C010042
+patch=1,EE,200F0004,extended,2421D9CF
+patch=1,EE,200F0008,extended,14A10015
+patch=1,EE,200F000C,extended,2409000A
+patch=1,EE,200F0010,extended,50890016
+patch=1,EE,200F0014,extended,2404000F
+patch=1,EE,200F0018,extended,24090004
+patch=1,EE,200F001C,extended,240B0005
+patch=1,EE,200F0020,extended,14890008
+patch=1,EE,200F0024,extended,3C01000F
+patch=1,EE,200F0028,extended,90A90000
+patch=1,EE,200F002C,extended,112B000C
+patch=1,EE,200F0030,extended,00000000
+patch=1,EE,200F0034,extended,A029FFFF
+patch=1,EE,200F0038,extended,90C90000
+patch=1,EE,200F003C,extended,10000008
+patch=1,EE,200F0040,extended,A029FFFE
+patch=1,EE,200F0044,extended,148B0006
+patch=1,EE,200F0048,extended,90AB0000
+patch=1,EE,200F004C,extended,112B0004
+patch=1,EE,200F0050,extended,00000000
+patch=1,EE,200F0054,extended,A02BFFFF
+patch=1,EE,200F0058,extended,90C90000
+patch=1,EE,200F005C,extended,A029FFFE
+patch=1,EE,200F0060,extended,A0A40000
+patch=1,EE,200F0064,extended,08082EF2
+patch=1,EE,200F0068,extended,A0C40000
+patch=1,EE,200F006C,extended,A0A90000
+patch=1,EE,200F0070,extended,08082EF2
+patch=1,EE,200F0074,extended,A0C40000
+patch=1,EE,200F0078,extended,24A9001E
+patch=1,EE,200F007C,extended,10C9000E
+patch=1,EE,200F0080,extended,24090004
+patch=1,EE,200F0084,extended,90AA001F
+patch=1,EE,200F0088,extended,152A0003
+patch=1,EE,200F008C,extended,24090005
+patch=1,EE,200F0090,extended,10000002
+patch=1,EE,200F0094,extended,00000000
+patch=1,EE,200F0098,extended,152A0005
+patch=1,EE,200F009C,extended,3C01000F
+patch=1,EE,200F00A0,extended,9029FFFE
+patch=1,EE,200F00A4,extended,A0A9001E
+patch=1,EE,200F00A8,extended,9029FFFF
+patch=1,EE,200F00AC,extended,A0A9001F
+patch=1,EE,200F00B0,extended,08082F46
+patch=1,EE,200F00B4,extended,00000000
+patch=1,EE,200F00B8,extended,00641821
+patch=1,EE,200F00BC,extended,90630000
+patch=1,EE,200F00C0,extended,08082F46
+patch=1,EE,200F00C4,extended,A0A3001F
+patch=1,EE,200F00C8,extended,00000000
+patch=1,EE,D020BBC0,extended,0A000000
+patch=1,EE,D020BBC2,extended,0900A0A4
+patch=1,EE,D020BD10,extended,08001821
+patch=1,EE,D020BD12,extended,07000064
+patch=1,EE,20208FA8,extended,00000000
+patch=1,EE,2020922C,extended,00000000
+patch=1,EE,2020BBC0,extended,0803C000
+patch=1,EE,2020BBC4,extended,00000000
+patch=1,EE,2020BD10,extended,0803C01E
+patch=1,EE,2020BD14,extended,00000000
+patch=1,EE,2020BD1C,extended,00000000
+```
+#### Code file for emulator(.pnach)
+[Download](./SLPM-65869_29396A53_InputMethodOptimization.pnach)
+#### Raw code
+```
+200F0000 3C010042
+200F0004 2421D9CF
+200F0008 14A10015
+200F000C 2409000A
+200F0010 50890016
+200F0014 2404000F
+200F0018 24090004
+200F001C 240B0005
+200F0020 14890008
+200F0024 3C01000F
+200F0028 90A90000
+200F002C 112B000C
+200F0030 00000000
+200F0034 A029FFFF
+200F0038 90C90000
+200F003C 10000008
+200F0040 A029FFFE
+200F0044 148B0006
+200F0048 90AB0000
+200F004C 112B0004
+200F0050 00000000
+200F0054 A02BFFFF
+200F0058 90C90000
+200F005C A029FFFE
+200F0060 A0A40000
+200F0064 08082EF2
+200F0068 A0C40000
+200F006C A0A90000
+200F0070 08082EF2
+200F0074 A0C40000
+200F0078 24A9001E
+200F007C 10C9000E
+200F0080 24090004
+200F0084 90AA001F
+200F0088 152A0003
+200F008C 24090005
+200F0090 10000002
+200F0094 00000000
+200F0098 152A0005
+200F009C 3C01000F
+200F00A0 9029FFFE
+200F00A4 A0A9001E
+200F00A8 9029FFFF
+200F00AC A0A9001F
+200F00B0 08082F46
+200F00B4 00000000
+200F00B8 00641821
+200F00BC 90630000
+200F00C0 08082F46
+200F00C4 A0A3001F
+200F00C8 00000000
+E00A0000 0020BBC0
+E009A0A4 0020BBC2
+E0081821 0020BD10
+E0070064 0020BD12
+20208FA8 00000000
+2020922C 00000000
+2020BBC0 0803C000
+2020BBC4 00000000
+2020BD10 0803C01E
+2020BD14 00000000
+2020BD1C 00000000
+```
+
+### Monster Hunter 2(dos) SLPM_662.80
+#### Code for emulator
+```
+gametitle=Monster Hunter 2 (SLPM-66280)
+
+[InputMethodOptimization]
+author=PoogieCharger
+description=Set the English input mode to use half-width as default, and optimize the input method to retain previous state.
+patch=1,EE,200F0000,extended,3C01005B
+patch=1,EE,200F0004,extended,2421EABF
+patch=1,EE,200F0008,extended,14A10006
+patch=1,EE,200F000C,extended,2409000A
+patch=1,EE,200F0010,extended,14890004
+patch=1,EE,200F0014,extended,2409000F
+patch=1,EE,200F0018,extended,A0C90000
+patch=1,EE,200F001C,extended,080C663C
+patch=1,EE,200F0020,extended,A0A40000
+patch=1,EE,200F0024,extended,A0C40000
+patch=1,EE,200F0028,extended,080C663C
+patch=1,EE,200F002C,extended,A0A40000
+patch=1,EE,200F0030,extended,24090004
+patch=1,EE,200F0034,extended,10690008
+patch=1,EE,200F0038,extended,24090005
+patch=1,EE,200F003C,extended,10690006
+patch=1,EE,200F0040,extended,2409000D
+patch=1,EE,200F0044,extended,10690004
+patch=1,EE,200F0048,extended,3C01000F
+patch=1,EE,200F004C,extended,A023FFFF
+patch=1,EE,200F0050,extended,A024FFFE
+patch=1,EE,200F0054,extended,A0A4FFA0
+patch=1,EE,200F0058,extended,03E00008
+patch=1,EE,200F005C,extended,A0A3001F
+patch=1,EE,200F0060,extended,3C09000F
+patch=1,EE,200F0064,extended,9129FFFE
+patch=1,EE,200F0068,extended,080C54CC
+patch=1,EE,200F006C,extended,A029EA40
+patch=1,EE,D031531C,extended,09000004
+patch=1,EE,D031531E,extended,08001000
+patch=1,EE,D03198E8,extended,07000000
+patch=1,EE,D03198EA,extended,0600A0A4
+patch=1,EE,2031531C,extended,0803C018
+patch=1,EE,20315320,extended,00000000
+patch=1,EE,203198E8,extended,0803C000
+patch=1,EE,203198EC,extended,00000000
+patch=1,EE,20319A4C,extended,0803C00C
+patch=1,EE,20319A50,extended,00000000
+```
+#### Code file for emulator(.pnach)
+[Download](./SLPM-66280_2F0E94A1_InputMethodOptimization.pnach)
+#### Raw code
+```
+200F0000 3C01005B
+200F0004 2421EABF
+200F0008 14A10006
+200F000C 2409000A
+200F0010 14890004
+200F0014 2409000F
+200F0018 A0C90000
+200F001C 080C663C
+200F0020 A0A40000
+200F0024 A0C40000
+200F0028 080C663C
+200F002C A0A40000
+200F0030 24090004
+200F0034 10690008
+200F0038 24090005
+200F003C 10690006
+200F0040 2409000D
+200F0044 10690004
+200F0048 3C01000F
+200F004C A023FFFF
+200F0050 A024FFFE
+200F0054 A0A4FFA0
+200F0058 03E00008
+200F005C A0A3001F
+200F0060 3C09000F
+200F0064 9129FFFE
+200F0068 080C54CC
+200F006C A029EA40
+E0090004 0031531C
+E0081000 0031531E
+E0070000 003198E8
+E006A0A4 003198EA
+2031531C 0803C018
+20315320 00000000
+203198E8 0803C000
+203198EC 00000000
+20319A4C 0803C00C
+20319A50 00000000
+```
+
 ## RangedWeaponCameraLock
 In the original game, when aiming with a ranged weapon and then canceling the aim (bowgun: release L1, bow: release R1), the camera height automatically adjusts based on the aiming view. This code allows you to lock the camera height so it is not affected by ranged weapon aiming.
 * Press START + → to enable the function, press START + ← to disable and revert to the original behavior.
+* Requires the newer version of PCSX2 emulator (v2.0 or later), or you can manually edit and add the code to your existing .pnach file.
 
 ### Monster Hunter 2(dos) SLPM_662.80
 #### Code for emulator
@@ -42,6 +406,7 @@ E0010000 0031B1B2
 ## TeamLeaderPopupKiller
 In MH2 online mode, a popup window saying 'The team leader is...' may sometimes appear, preventing normal gameplay. In situations where multiplayer PvP cannot proceed properly, you can press L2+L3 to close the popup window. In theory, this should have no other side effects.
 * If the server supports multiplayer PvP in the future and this popup window is no longer an issue, please consider disabling the code or avoid pressing the key combination, and only press it when an abnormal popup window appears.
+* Requires the newer version of PCSX2 emulator (v2.0 or later), or you can manually edit and add the code to your existing .pnach file.
 
 ### Monster Hunter 2(dos) SLPM_662.80
 #### Code for emulator
@@ -305,4 +670,4 @@ _L 0x00224848 0x00000003
 [Download](./ULJM05066_PS2_Connection_Check_Bypass.ini)
 
 
-###### Last update: 2026/05/05 by PoogieCharger
+###### Last update: 2026/06/12 by PoogieCharger
