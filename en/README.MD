@@ -405,7 +405,7 @@ E0010000 0031B1B2
 
 ## TeamLeaderPopupKiller
 In MH2 online mode, a popup window saying 'The team leader is...' may sometimes appear, preventing normal gameplay. In situations where multiplayer PvP cannot proceed properly, you can press L2+L3 to close the popup window. In theory, this should have no other side effects.
-* If the server supports multiplayer PvP in the future and this popup window is no longer an issue, please consider disabling the code or avoid pressing the key combination, and only press it when an abnormal popup window appears.
+* If the server supports multiplayer PvP in the future and this popup window is no longer an issue, please consider disabling the code or avoid pressing the button combination, and only press it when an abnormal popup window appears.
 * Requires the newer version of PCSX2 emulator (v2.0 or later), or you can manually edit and add the code to your existing .pnach file.
 
 ### Monster Hunter 2(dos) SLPM_662.80
@@ -620,7 +620,7 @@ patch=1,EE,203DB240,extended,10400021
 Enter *CONNECT* from main menu, load your save and get ready, on *Checking MONSTER HUNTER PORTABLE* screen, press *SELECT+START* to bypass the connection check.
 
 * Support PCSX2 mordern cheat system, can be toggled on/off
-* Key combination only takes effect on checking connection screen(a total three conditional checks for actual execution), it can theoretically remain on without other effects
+* Button combination only takes effect on checking connection screen(a total three conditional checks for actual execution), it can theoretically remain on without other effects
 * Theoretically the same as connecting with a real PSP
 * Tested on PCSX2(v2.0 later) and PS2 fat 30000 model (OPL+PS2RD), not guaranteed for other environments
 #### Code for emulator
@@ -654,7 +654,7 @@ E002FFF6 0024BC1C
 ### Monster Hunter Portable(MHP) ULJM-05066
 Enter *CONNECT* from main menu, load your save and get ready, on *Checking MONSTER HUNTER 2* screen, press *SELECT+START* to bypass the connection check.
 
-* Cannot prevent repeated triggering(for now), please don't press the key combination outside the CONNECT screen, or just disable the code when not in use;
+* Cannot prevent repeated triggering(for now), please don't press the button combination outside the CONNECT screen, or just disable the code when not in use;
 * Theoretically the same as connecting with a real PS2(MH2 progress having completed the slaying of Kushala Daora);
 * Tested on PPSSPP(v1.19.3) and PSP 3000 model(Ark-4 cfw+Cheat Master Fusion), not guaranteed for other environments.
 #### Code for emulator
